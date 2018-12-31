@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bkColor1"
+    tools:context=".Activities.CreateAccountActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingRight="15dp"
+                android:text="انشاء حساب جديد"
+                android:textColor="@color/bkColor"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ed_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/gradient_bkground2"
+                android:hint="الاسم"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="@color/bkColor"
+                android:textColorHint="@color/bkColor"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/ed_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gradient_bkground2"
+                android:hint="رقم الهاتف"
+                android:inputType="number"
+                android:paddingRight="15dp"
+                android:textColor="@color/bkColor"
+                android:textColorHint="@color/bkColor"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/ed_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gradient_bkground2"
+                android:hint="العنوان"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="@color/bkColor"
+                android:textColorHint="@color/bkColor"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/ed_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gradient_bkground2"
+                android:hint="الايميل"
+                android:inputType="textEmailAddress"
+                android:paddingRight="15dp"
+                android:textColor="@color/bkColor"
+                android:textColorHint="@color/bkColor"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/ed_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gradient_bkground2"
+                android:hint="الرقم السري"
+                android:inputType="textPassword"
+                android:paddingRight="15dp"
+                android:textColor="@color/bkColor"
+                android:textColorHint="@color/bkColor"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/ed_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gradient_bkground2"
+                android:hint="النوع"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="@color/bkColor"
+                android:textColorHint="@color/bkColor"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/add_pic_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/gradient_bkground2"
+                android:text="اضف صورة"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/add_new_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/gradient_bkground2"
+                android:text="انشاء حساب"
+                android:textSize="30sp" />
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

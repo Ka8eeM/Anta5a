@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/my_account"
+            android:icon="@drawable/account_circle_24px"
+            android:title="حسابي" />
+        <item
+            android:id="@+id/my_notification"
+            android:icon="@drawable/notification_24px"
+            android:title="اشعارات" />
+        <item
+            android:id="@+id/my_orders"
+            android:icon="@drawable/my_orders_24px"
+            android:title="طلباتي" />
+        <item
+            android:id="@+id/report_problem"
+            android:icon="@drawable/report_problem_24px"
+            android:title="اقترحات وشكاوي" />
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/info_24px"
+            android:title="معلومات عنا" />
+        <item
+            android:id="@+id/log_out"
+            android:icon="@drawable/logout_24px"
+            android:title="تسجيل خروج" />
+    </group>
+
+</menu>
