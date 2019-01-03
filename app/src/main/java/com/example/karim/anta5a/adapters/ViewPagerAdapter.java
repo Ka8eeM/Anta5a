@@ -11,8 +11,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.karim.anta5a.APIs.RetrofitSystem;
 import com.example.karim.anta5a.Activities.Service2Activity;
 import com.example.karim.anta5a.R;
+import com.example.karim.anta5a.models.MainServices;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ViewPagerAdapter extends PagerAdapter {
 
@@ -31,6 +39,7 @@ public class ViewPagerAdapter extends PagerAdapter {
                     R.drawable.helthy
             };
 
+
     @Override
     public int getCount() {
         return slideImages.length;
@@ -43,7 +52,7 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     @NonNull
     @Override
-    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+    public Object instantiateItem(@NonNull ViewGroup container, final int position) {
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.slide_layout, container, false);
         CardView cardView = view.findViewById(R.id.card_view_slide);
@@ -54,6 +63,20 @@ public class ViewPagerAdapter extends PagerAdapter {
             }
         });
         ImageView imageView = cardView.findViewById(R.id.image_view_slide);
+        Call<List<MainServices>> call = RetrofitSystem.getInstance().getApi().getMainServices();
+        call.enqueue(new Callback<List<MainServices>>() {
+            @Override
+            public void onResponse(Call<List<MainServices>> call, Response<List<MainServices>> response) {
+                List<MainServices> res = response.body();
+                res.get(position);
+                // TODO complete main services
+            }
+
+            @Override
+            public void onFailure(Call<List<MainServices>> call, Throwable t) {
+
+            }
+        });
         imageView.setImageResource(slideImages[position]);
         container.addView(view);
         return view;

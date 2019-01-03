@@ -2,6 +2,9 @@ package com.example.karim.anta5a.APIs;
 
 import com.example.karim.anta5a.models.CustomerDataResponse;
 import com.example.karim.anta5a.models.LoginResponse;
+import com.example.karim.anta5a.models.MainServices;
+
+import java.util.List;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -53,4 +56,8 @@ public interface Api {
             @Field("Address") String address,
             @Field("Gender") String gender
     );
+
+    @FormUrlEncoded
+    @POST("ApigetMainServices")
+    Call<List<MainServices>>getMainServices();
 }
